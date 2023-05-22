@@ -6,6 +6,10 @@ class Transaction {
     deposit(add) {
         return this.balance += add
     }
+
+    withdraw(minus) {
+        return this.balance -= minus
+    }
 }
 
 module.exports = Transaction
