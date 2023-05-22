@@ -110,13 +110,13 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ------
 
-  start Node from the root file commandline.
+  Start Node from the root file commandline.
 
   ```bash
   node
   ```
 
-  require the nessary files
+  Require the nessary files
 
   ```bash
   const Transaction = require('./src/transaction');
