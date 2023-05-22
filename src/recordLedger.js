@@ -13,8 +13,8 @@ class RecordLedger {
             {
                 Date: date, 
                 Debit: null, 
-                Deposit: add, 
-                Amount: this.amount
+                Deposit: this.amount, 
+                Balance: add
             });
     } 
 
@@ -25,16 +25,17 @@ class RecordLedger {
         this.ledger.push( 
             {
                 Date: date, 
-                Debit: minus, 
+                Debit: this.amount, 
                 Deposit: null, 
-                Amount: this.amount
+                Balance: minus
             });
     } 
 
     printLedger() {
-        const headers = 'Date || Debit || Deposit || Amount\n';
-        const ledgerRows = this.ledger.map(
-          item => `${item.Date} || ${item.Debit || ''} || ${item.Deposit || ''} || ${item.Amount}`
+        const headers = 'Date || Debit || Deposit || Balance\n';
+        const sortedLedger = this.ledger.sort((a, b) => new Date(b.Date) - new Date(a.Date));
+        const ledgerRows = sortedLedger.map(
+          item => `${item.Date} || ${item.Debit || ''} || ${item.Deposit || ''} || ${item.Balance}`
         );
         return `${headers}${ledgerRows.join('\n')}`;
     }
