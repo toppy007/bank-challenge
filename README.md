@@ -89,6 +89,8 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ---
 
+![Image Description](./Bank-Challenge-2023-05-09-1505.svg)
+
 ## Self-assessment
 
 Once you have completed the challenge and feel happy with your solution, here's a form to help you reflect on the quality of your code: https://docs.google.com/forms/d/1Q-NnqVObbGLDHxlvbUfeAC7yBCf3eCjTmz6GOqC9Aeo/edit
