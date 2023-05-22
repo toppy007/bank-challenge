@@ -1,5 +1,12 @@
 # Bank tech test
 
+------
+
+ <!-- ASSIGNMENT -->
+## Makers Brief of the project
+
+------
+
 Today, you'll practice doing a tech test.
 
 For most tech tests, you'll essentially have unlimited time.  This practice session is about producing the best code you can when there is a minimal time pressure.
@@ -87,7 +94,12 @@ Before running the project, ensure that you have installed `npm` and `node` in y
    jest
    ```
 
----
+------
+
+ <!-- PLANNING -->
+## Excalidraw of the proposed OO design.
+
+------
 
 ![Image Description](./Bank-Challenge-2023-05-09-1505.svg)
 
