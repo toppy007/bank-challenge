@@ -11,7 +11,7 @@ describe('RecordLedger', () => {
 
         ledger.recordDepositTransaction(100)
 
-        expect(ledger.printLedger()).toEqual ([{ Date: '22-4-2023', Debit: null, Deposit: 100, Amount: 100 }])
+        expect(ledger.printLedger()).toEqual ("Date || Debit || Deposit || Amount\n22-4-2023 ||  || 100 || 100")
         });
 
     it('Debits and returns withdrawal and balance', () => {
@@ -21,6 +21,6 @@ describe('RecordLedger', () => {
 
         ledger.recordDepositTransaction(50)
 
-        expect(ledger.printLedger()).toEqual ([{ Date: '22-4-2023', Debit: null, Deposit: 50, Amount: 50 }])
+        expect(ledger.printLedger()).toEqual ("Date || Debit || Deposit || Amount\n22-4-2023 ||  || 50 || 50")
         });
     });

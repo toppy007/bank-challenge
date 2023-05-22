@@ -32,8 +32,12 @@ class RecordLedger {
     } 
 
     printLedger() {
-        return this.ledger
-    } 
+        const headers = 'Date || Debit || Deposit || Amount\n';
+        const ledgerRows = this.ledger.map(
+          item => `${item.Date} || ${item.Debit || ''} || ${item.Deposit || ''} || ${item.Amount}`
+        );
+        return `${headers}${ledgerRows.join('\n')}`;
+    }
 }
     
 module.exports = RecordLedger
