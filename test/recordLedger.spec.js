@@ -19,9 +19,9 @@ describe('RecordLedger', () => {
         const date = new DateTime();
         const ledger = new RecordLedger(transaction, date)
 
-        ledger.recordDepositTransaction(50)
+        ledger.recordWithdrawTransaction(50)
 
-        expect(ledger.printLedger()).toEqual ("Date || Debit || Deposit || Balance\n22-4-2023 ||  || 50 || 50")
+        expect(ledger.printLedger()).toEqual ("Date || Debit || Deposit || Balance\n22-4-2023 || 50 ||  || -50")
         });
     });
 
