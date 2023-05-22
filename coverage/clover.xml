@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684783004068" clover="3.2.0">
-  <project timestamp="1684783004068" name="All files">
+<coverage generated="1684783709387" clover="3.2.0">
+  <project timestamp="1684783709387" name="All files">
     <metrics statements="37" coveredstatements="37" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11" elements="52" coveredelements="52" complexity="0" loc="37" ncloc="37" packages="1" files="3" classes="3"/>
     <file name="dateTime.js" path="/Users/christoplisek/Projects_Makers/Solo_Projects/bank-challenge/src/dateTime.js">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

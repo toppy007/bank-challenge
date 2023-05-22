@@ -91,7 +91,7 @@ Before running the project, ensure that you have installed `npm` and `node` in y
     Then run the tests in a new terminal session
 
     ```bash
-    jest
+    npm test
     ```
 
 ------
@@ -102,6 +102,44 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 ------
 
 ![Image Description](./Bank-Challenge-2023-05-09-1505.svg)
+
+------
+
+ <!-- RUNNING THE PROGRAM IN NODE -->
+## running the program
+
+------
+
+  start Node from the root file commandline.
+
+  ```bash
+  node
+  ```
+
+  require the nessary files
+
+  ```bash
+  const Transaction = require('./src/transaction');
+  const DateTime = require('./src/dateTime');
+  const RecordLedger = require('./src/recordLedger');
+  ```
+  Initialize the objects related to transactions, date, and record keeping
+
+  ```bash
+  const transaction = new Transaction();
+  const date = new DateTime();
+  const ledger = new RecordLedger(transaction, date);
+  ```
+
+  Interact with the programs inputs and outputs
+
+  ```bash
+  ledger.recordDepositTransaction(1000);
+  ledger.recordWithdrawTransaction(500);
+  ledger.recordDepositTransaction(100);
+  ledger.recordWithdrawTransaction(50);
+  console.log(ledger.printLedger());
+  ```
 
 ## Self-assessment
 
