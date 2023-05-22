@@ -69,7 +69,7 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ### Installation
 
-    Clone the repo
+- Clone the repo
 
     ```bash
     git clone https://github.com/toppy007/bank-challenge.git
@@ -82,17 +82,19 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ------
 
-    Install jest javascript testing framework
+- Install jest javascript testing framework
 
     ```bash
     npm install --save-dev jest
     ```
 
-    Then run the tests in a new terminal session
+- Then run the tests in a new terminal session
 
     ```bash
     npm test
     ```
+
+![Image Description](./Test-Output-2023-05-22-at-22.59.20.png)
 
 ------
 
@@ -110,36 +112,37 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ------
 
-  Start Node from the root file commandline.
+- Start Node from the root file commandline.
 
-  ```bash
-  node
-  ```
+    ```bash
+    node
+    ```
 
-  Require the nessary files
+- Require the nessary files
 
-  ```bash
-  const Transaction = require('./src/transaction');
-  const DateTime = require('./src/dateTime');
-  const RecordLedger = require('./src/recordLedger');
-  ```
-  Initialize the objects related to transactions, date, and record keeping
+    ```bash
+    const Transaction = require('./src/transaction');
+    const DateTime = require('./src/dateTime');
+    const RecordLedger = require('./src/recordLedger');
+    ```
+  
+- Initialize the objects related to transactions, date, and record keeping
 
-  ```bash
-  const transaction = new Transaction();
-  const date = new DateTime();
-  const ledger = new RecordLedger(transaction, date);
-  ```
+    ```bash
+    const transaction = new Transaction();
+    const date = new DateTime();
+    const ledger = new RecordLedger(transaction, date);
+    ```
 
-  Interact with the programs inputs and outputs
+- Interact with the programs inputs and outputs
 
-  ```bash
-  ledger.recordDepositTransaction(1000);
-  ledger.recordWithdrawTransaction(500);
-  ledger.recordDepositTransaction(100);
-  ledger.recordWithdrawTransaction(50);
-  console.log(ledger.printLedger());
-  ```
+    ```bash
+    ledger.recordDepositTransaction(1000);
+    ledger.recordWithdrawTransaction(500);
+    ledger.recordDepositTransaction(100);
+    ledger.recordWithdrawTransaction(50);
+    console.log(ledger.printLedger());
+    ```
 
 ------
 
@@ -149,7 +152,6 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 ------
 
 ![Image Description](./Expected-Output-2023-05-22-at-22.55.45.png)
-![Image Description](./Test-Output-2023-05-22-at-22.59.20.png)
 
 **How was this resource?**  
 [😫](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/course&prefill_File=individual_challenges/bank_tech_test.md&prefill_Sentiment=😫) [😕](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/course&prefill_File=individual_challenges/bank_tech_test.md&prefill_Sentiment=😕) [😐](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/course&prefill_File=individual_challenges/bank_tech_test.md&prefill_Sentiment=😐) [🙂](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/course&prefill_File=individual_challenges/bank_tech_test.md&prefill_Sentiment=🙂) [😀](https://airtable.com/shrUJ3t7KLMqVRFKR?prefill_Repository=makersacademy/course&prefill_File=individual_challenges/bank_tech_test.md&prefill_Sentiment=😀)  
