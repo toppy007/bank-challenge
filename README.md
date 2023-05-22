@@ -69,11 +69,11 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ### Installation
 
-  1. Clone the repo
+    Clone the repo
 
-   ```bash
-   git clone https://github.com/toppy007/bank-challenge.git
-   ```
+    ```bash
+    git clone https://github.com/toppy007/bank-challenge.git
+    ```
 
 ------
 
@@ -82,17 +82,17 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ------
 
-   Install jest javascript testing framework
+    Install jest javascript testing framework
 
-   ```bash
-   npm install --save-dev jest
-   ```
+    ```bash
+    npm install --save-dev jest
+    ```
 
-   Then run the tests in a new terminal session
+    Then run the tests in a new terminal session
 
-   ```bash
-   jest
-   ```
+    ```bash
+    jest
+    ```
 
 ------
 
