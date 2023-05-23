@@ -82,7 +82,7 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 
 ------
 
-- Install jest javascript testing framework
+- Install jest javascript testing framework from the root
 
     ```bash
     npm install --save-dev jest
@@ -91,7 +91,13 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 - Then run the tests in a new terminal session
 
     ```bash
-    npm test
+    npm test -- coverage
+    ```
+
+- Install eslint for javascript testing framework from the root
+
+    ```bash
+    npm install eslint --save-dev
     ```
 
 ![Image Description](./Test-Output-2023-05-22-at-22.59.20.png)
