@@ -1,3 +1,5 @@
+/*eslint no-undef: "error"*/
+
 class RecordLedger {
     constructor (transaction, date) {
         this.transaction = transaction;
