@@ -3,7 +3,7 @@ class RecordLedger {
         this.transaction = transaction;
         this.date = date;
         this.ledger = [];
-    };
+    }
 
     recordDepositTransaction(amount) {
         this.amount = amount;
@@ -16,7 +16,7 @@ class RecordLedger {
                 Deposit: this.amount, 
                 Balance: add
             });
-    };
+    }
 
     recordWithdrawTransaction(amount) {
         this.amount = amount;
@@ -29,7 +29,7 @@ class RecordLedger {
                 Deposit: null, 
                 Balance: minus
             });
-    }; 
+    }
 
     printLedger() {
         const headers = 'Date || Debit || Deposit || Balance\n';
@@ -38,7 +38,7 @@ class RecordLedger {
             item => `${item.Date} || ${item.Debit || ''} || ${item.Deposit || ''} || ${item.Balance}`
         );
         return `${headers}${ledgerRows.join('\n')}`;
-    };
+    }
 }
     
 module.exports = RecordLedger

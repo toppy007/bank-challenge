@@ -5,14 +5,16 @@ const DateTime = require('../src/dateTime');
 
 describe('RecordLedger', () => {
     it('adds and returns deposit and balance', () => {
-        const transaction = new Transaction;
-        const date = new DateTime();
-        const ledger = new RecordLedger(transaction, date)
+      const transaction = new Transaction();
+      const date = new DateTime();
+      const ledger = new RecordLedger(transaction, date);
+      
+      ledger.recordDepositTransaction(100);
 
-        ledger.recordDepositTransaction(100)
+      const result = date.getDate();
 
-        expect(ledger.printLedger()).toEqual ("Date || Debit || Deposit || Balance\n22-4-2023 ||  || 100 || 100")
-        });
+      expect(ledger.printLedger()).toEqual(`Date || Debit || Deposit || Balance\n${result} ||  || 100 || 100`);
+    });
 
     it('Debits and returns withdrawal and balance', () => {
         const transaction = new Transaction;
@@ -21,7 +23,9 @@ describe('RecordLedger', () => {
 
         ledger.recordWithdrawTransaction(50)
 
-        expect(ledger.printLedger()).toEqual ("Date || Debit || Deposit || Balance\n22-4-2023 || 50 ||  || -50")
+        const result = date.getDate();
+
+        expect(ledger.printLedger()).toEqual (`Date || Debit || Deposit || Balance\n${result} || 50 ||  || -50`)
         });
     });
 
