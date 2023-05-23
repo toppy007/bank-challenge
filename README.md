@@ -91,13 +91,19 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 - Then run the tests in a new terminal session
 
     ```bash
-    npm test -- coverage
+    npm test --coverage
     ```
 
 - Install eslint for javascript testing framework from the root
 
     ```bash
     npm install eslint --save-dev
+    ```
+
+- Then run the tests in a new terminal session
+
+    ```bash
+    npm run lint-tests
     ```
 
 ![Image Description](./Test-Output-2023-05-22-at-22.59.20.png)
