@@ -1,4 +1,4 @@
-const Transaction = require('../src/transaction')
+const Transaction = require('../src/balanceUpdate')
 const RecordLedger = require('../src/recordLedger')
 const DateTime = require('../src/dateTime');
 
@@ -13,7 +13,7 @@ describe('RecordLedger', () => {
 
       const result = date.getDate();
 
-      expect(ledger.printLedger()).toEqual(`Date || Debit || Deposit || Balance\n${result} ||  || 100 || 100`);
+      expect(ledger.printLedger()).toEqual(`date || credit || debit || balance\n${result} || 100.00 ||  || 100.00`);
     });
 
     it('Debits and returns withdrawal and balance', () => {
@@ -25,21 +25,21 @@ describe('RecordLedger', () => {
 
         const result = date.getDate();
 
-        expect(ledger.printLedger()).toEqual (`Date || Debit || Deposit || Balance\n${result} || 50 ||  || -50`)
+        expect(ledger.printLedger()).toEqual (`date || credit || debit || balance\n${result} ||  || 50.00 || -50.00`)
         });
     });
 
 describe('RecordLedger', () => {
     it('returns a sorted ledger by date', () => {
         const mockedLedger = [
-            { Date: '2023-04-22', Debit: null, Deposit: 100, Balance: 100 },
-            { Date: '2023-04-20', Debit: 50, Deposit: null, Balance: 50 },
-            { Date: '2023-04-23', Debit: 50, Deposit: null, Balance: 50 }
+            { date: '2023-04-22', credit: null, debit: '100.00', balance: '100.00' },
+            { date: '2023-04-20', credit: '50.00', debit: null, balance: '50.00' },
+            { date: '2023-04-23', credit: '50.00', debit: null, balance: '50.00' }
         ];
     
         const ledger = new RecordLedger();
         ledger.ledger = mockedLedger;
 
-        expect(ledger.printLedger()).toEqual('Date || Debit || Deposit || Balance\n2023-04-23 || 50 ||  || 50\n2023-04-22 ||  || 100 || 100\n2023-04-20 || 50 ||  || 50');
+        expect(ledger.printLedger()).toEqual('date || credit || debit || balance\n2023-04-23 || 50.00 ||  || 50.00\n2023-04-22 ||  || 100.00 || 100.00\n2023-04-20 || 50.00 ||  || 50.00');
         });
     });
