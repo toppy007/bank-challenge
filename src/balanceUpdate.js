@@ -10,7 +10,7 @@ class BalanceUpdate {
         return {
             date: this.date.getDate(),
             credit: formattedAmount >= 0 ? formattedAmount : null,
-            debit: formattedAmount < 0 ? Math.abs(formattedAmount) : null,
+            debit: formattedAmount < 0 ? Math.abs(formattedAmount).toFixed(2) : null,
         };
     }
 }
