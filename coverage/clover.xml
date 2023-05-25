@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684995696697" clover="3.2.0">
-  <project timestamp="1684995696697" name="All files">
+<coverage generated="1684996071340" clover="3.2.0">
+  <project timestamp="1684996071340" name="All files">
     <metrics statements="32" coveredstatements="32" conditionals="10" coveredconditionals="10" methods="11" coveredmethods="11" elements="53" coveredelements="53" complexity="0" loc="32" ncloc="32" packages="1" files="3" classes="3"/>
     <file name="balanceUpdate.js" path="/Users/christoplisek/Projects_Makers/Solo_Projects/bank-challenge/src/balanceUpdate.js">
       <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
