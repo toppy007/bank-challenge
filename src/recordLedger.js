@@ -18,10 +18,10 @@ class RecordLedger {
     
     printLedger() {
         const headers = 'date || credit || debit || balance\n';
-        const sortedLedger = this.ledger.sort((b, a) => new Date(b.date) - new Date(a.date)).reverse();
-        const updatedLedger = this.calculateBalance(sortedLedger);
+        const updatedLedger = this.calculateBalance(this.ledger);
+        const sortedLedger = updatedLedger.sort((b, a) => new Date(b.date) - new Date(a.date)).reverse();
         
-        const ledgerRows = updatedLedger.map((item) => {
+        const ledgerRows = sortedLedger.map((item) => {
             return `${item.date} || ${item.credit || ''} || ${item.debit || ''} || ${item.balance}`;
         });
         

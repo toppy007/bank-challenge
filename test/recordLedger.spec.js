@@ -40,6 +40,6 @@ describe('RecordLedger', () => {
         const ledger = new RecordLedger();
         ledger.ledger = mockedLedger;
 
-        expect(ledger.printLedger()).toEqual('date || credit || debit || balance\n24/05/2023 || 100.00 ||  || 100.00\n23/05/2023 || 100.00 ||  || 200.00\n22/05/2023 || 100.00 ||  || 300.00');
+        expect(ledger.printLedger()).toEqual('date || credit || debit || balance\n24/05/2023 || 100.00 ||  || 300.00\n23/05/2023 || 100.00 ||  || 200.00\n22/05/2023 || 100.00 ||  || 100.00');
         });
     });
