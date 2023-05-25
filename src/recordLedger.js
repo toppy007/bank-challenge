@@ -18,7 +18,7 @@ class RecordLedger {
     
     printLedger() {
         const headers = 'date || credit || debit || balance\n';
-        const sortedLedger = this.ledger.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const sortedLedger = this.ledger.sort((b, a) => new Date(b.date) - new Date(a.date)).reverse();
         const updatedLedger = this.calculateBalance(sortedLedger);
         
         const ledgerRows = updatedLedger.map((item) => {
@@ -37,7 +37,7 @@ const update = new BalanceUpdate();
 const ledger = new RecordLedger(update);
 
 ledger.updateLedger(1000);
+ledger.updateLedger(2000);
 ledger.updateLedger(-500);
-ledger.updateLedger(1000);
 
 console.log(ledger.printLedger());

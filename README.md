@@ -149,11 +149,16 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 - Interact with the programs inputs and outputs
 
     ```bash
-    ledger.recordDepositTransaction(1000);
-    ledger.recordWithdrawTransaction(500);
-    ledger.recordDepositTransaction(100);
-    ledger.recordWithdrawTransaction(50);
-    console.log(ledger.printLedger());
+const BalanceUpdate = require('./balanceUpdate');
+
+const update = new BalanceUpdate();
+const ledger = new RecordLedger(update);
+
+ledger.updateLedger(1000);
+ledger.updateLedger(2000);
+ledger.updateLedger(-500);
+
+console.log(ledger.printLedger());
     ```
 
 ------

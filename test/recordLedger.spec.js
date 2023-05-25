@@ -32,9 +32,9 @@ describe('RecordLedger', () => {
 describe('RecordLedger', () => {
     it('returns a sorted ledger by date', () => {
         const mockedLedger = [
-            {"credit": "100.00", "date": "24/05/2023", "debit": null},
+            {"credit": "100.00", "date": "22/05/2023", "debit": null},
             {"credit": "100.00", "date": "23/05/2023", "debit": null},
-            {"credit": "100.00", "date": "22/05/2023", "debit": null}
+            {"credit": "100.00", "date": "24/05/2023", "debit": null},
         ];
     
         const ledger = new RecordLedger();
