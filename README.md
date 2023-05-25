@@ -133,32 +133,24 @@ Before running the project, ensure that you have installed `npm` and `node` in y
 - Require the nessary files
 
     ```bash
-    const Transaction = require('./src/transaction');
-    const DateTime = require('./src/dateTime');
-    const RecordLedger = require('./src/recordLedger');
+    const BalanceUpdate = require('./balanceUpdate');
     ```
   
 - Initialize the objects related to transactions, date, and record keeping
 
     ```bash
-    const transaction = new Transaction();
-    const date = new DateTime();
-    const ledger = new RecordLedger(transaction, date);
+    const update = new BalanceUpdate();
+    const ledger = new RecordLedger(update);
     ```
 
 - Interact with the programs inputs and outputs
 
     ```bash
-const BalanceUpdate = require('./balanceUpdate');
+    ledger.updateLedger(1000);
+    ledger.updateLedger(2000);
+    ledger.updateLedger(-500);
 
-const update = new BalanceUpdate();
-const ledger = new RecordLedger(update);
-
-ledger.updateLedger(1000);
-ledger.updateLedger(2000);
-ledger.updateLedger(-500);
-
-console.log(ledger.printLedger());
+    console.log(ledger.printLedger());
     ```
 
 ------
